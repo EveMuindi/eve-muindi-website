@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Eve Muindi Tech</title>
 
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+<link rel="stylesheet" href="./static/style.css">
 </head>
-<a href="https://wa.me/254703206258" class="whatsapp-btn" target="_blank">
-    Chat with me
-    </a>
+
 <body>
+
+<a href="https://wa.me/254703206258" class="whatsapp-btn" target="_blank">
+Chat with me
+</a>
 
 <nav>
 <h2 class="logo">Eve Muindi</h2>
 
 <ul>
 <li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
 
 <header class="hero">
 
@@ -34,8 +37,7 @@
 
 </header>
 
-
-<section class="services">
+<section class="services" id="services">
 
 <h2>My Services</h2>
 
@@ -58,67 +60,67 @@
 
 </div>
 
-</section><section class="portfolio">
+</section>
 
-    <h2>Portfolio</h2>
-    <p class="portfolio-intro">Some projects and solutions I’ve worked on.</p>
-    
-    <div class="portfolio-container">
-    
-        <div class="project-card">
+<section class="portfolio">
 
-            <img src="{{ url_for('static', filename='project1.jpg') }}" alt="Project">
-            
-            <h3>Business Website</h3>
-            
-            <p>Designed and developed a responsive website for a small business.</p>
-            
-            </div>
-    <section class="projects">
+<h2>Portfolio</h2>
+<p class="portfolio-intro">Some projects and solutions I’ve worked on.</p>
 
-        <h2>My Projects</h2>
-        
-        <img src="{{ url_for('static', filename='project1.jpg') }}" alt="Project 1">
-        
-        <img src="{{ url_for('static', filename='project2.jpg') }}" alt="Project 2">
-        
-        <img src="{{ url_for('static', filename='project3.jpg') }}" alt="Project 3">
-        
-        </section>
-    <div class="project-card">
-    <h3>IT Infrastructure Setup</h3>
-    <p>Configured office networks, systems, and secure user access.</p>
-    </div>
-    
-    <div class="project-card">
-    <h3>Social Media Tech Support</h3>
-    <p>Managed content tools and automation for online brand growth.</p>
-    </div>
-    
-    </div>
-    
-    </section>
-<section class="about">
+<div class="portfolio-container">
 
-    <h2>About Eve Muindi</h2>
-    
-    <p>
-    Eve Muindi is an IT specialist passionate about helping businesses
-    grow through modern technology. With experience in web development,
-    system administration, and technical support, I provide reliable
-    solutions that help businesses operate efficiently.
-    </p>
-    
-    </section>
-    
-    
-    <section class="contact">
-    
-    <h2>Contact Me</h2>
-    
-    <p>Email: hello.lynenexus@gmail.com</p>
-    <p>Phone: 0703 206 258</p>
-    
-    <a href="#" class="btn">Send Message</a>
-    
-    </section>
+<div class="project-card">
+<img src="./static/project1.jpg" alt="Business Website Project">
+<h3>Business Website</h3>
+<p>Designed and developed a responsive website for a small business.</p>
+</div>
+
+<div class="project-card">
+<h3>IT Infrastructure Setup</h3>
+<p>Configured office networks, systems, and secure user access.</p>
+</div>
+
+<div class="project-card">
+<h3>Social Media Tech Support</h3>
+<p>Managed content tools and automation for online brand growth.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="projects">
+
+<h2>My Projects</h2>
+
+<img src="./static/project1.jpg" alt="Project 1">
+<img src="./static/project2.jpg" alt="Project 2">
+<img src="./static/project3.jpg" alt="Project 3">
+
+</section>
+
+<section class="about" id="about">
+
+<h2>About Eve Muindi</h2>
+
+<p>
+Eve Muindi is an IT specialist passionate about helping businesses grow through modern technology.
+With experience in web development, system administration, and technical support, I provide reliable
+solutions that help businesses operate efficiently.
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>Contact Me</h2>
+
+<p>Email: hello.lynenexus@gmail.com</p>
+<p>Phone: 0703 206 258</p>
+
+<a href="#" class="btn">Send Message</a>
+
+</section>
+
+</body>
+</html>
