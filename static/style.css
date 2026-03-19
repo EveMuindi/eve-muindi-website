@@ -21,7 +21,7 @@ html {
     background: #111;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 9999; /* FIX: always on top */
   }
   
   .logo {
@@ -39,6 +39,8 @@ html {
     color: white;
     text-decoration: none;
     transition: 0.3s ease;
+    padding: 10px; /* FIX: better mobile tapping */
+    display: inline-block;
   }
   
   nav a:hover {
@@ -192,6 +194,7 @@ html {
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: 0.3s ease;
+    z-index: 9999;
   }
   
   .whatsapp-btn:hover {
@@ -199,12 +202,13 @@ html {
     transform: scale(1.1);
   }
   
-  /* ANIMATIONS */
+  /* ANIMATIONS (FIXED) */
   
   section {
     opacity: 0;
     transform: translateY(30px);
     animation: fadeIn 1s ease forwards;
+    pointer-events: auto; /* FIX: prevents blocking clicks */
   }
   
   @keyframes fadeIn {
