@@ -1,224 +1,258 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:black;
-    color:white;
+/* GLOBAL */
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+  }
+  
+  /* NAVBAR */
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    color: red;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    padding: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: red;
+    transform: translateY(-2px);
+  }
+  
+  /* HERO */
+  
+  .hero {
+    text-align: center;
+    padding: 120px 20px;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    color: red;
+  }
+  
+  .hero p {
+    font-size: 20px;
+  }
+  
+  /* BUTTON */
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #c70000;
+    transform: scale(1.05);
+  }
+  
+  /* SERVICES */
+  
+  .services {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #111;
+    padding: 30px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* PORTFOLIO */
+  
+  .portfolio {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0a0a0a;
+  }
+  
+  .portfolio-intro {
+    margin-bottom: 40px;
+    font-size: 18px;
+  }
+  
+  .portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card {
+    background: #111;
+    padding: 30px;
+    width: 260px;
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid red;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* PROJECT IMAGES */
+  
+  .projects img {
+    width: 300px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  /* ABOUT */
+  
+  .about {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0a0a0a;
+  }
+  
+  .about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* CONTACT */
+  
+  .contact {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  /* WHATSAPP BUTTON */
+  
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #1ebe5b;
+    transform: scale(1.1);
+  }
+  
+  /* ANIMATIONS */
+  
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    
-    /* NAVBAR */
-    
-    nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:#111;
+  }
+  
+  /* MOBILE RESPONSIVENESS */
+  
+  @media (max-width: 768px) {
+  
+    nav {
+      flex-direction: column;
+      gap: 10px;
     }
-    
-    .logo{
-    color:red;
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
     }
-    
-    nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+  
+    .hero h1 {
+      font-size: 40px;
     }
-    
-    nav a{
-    color:white;
-    text-decoration:none;
+  
+    .hero p {
+      font-size: 18px;
     }
-    
-    /* HERO */
-    
-    .hero{
-    text-align:center;
-    padding:120px 20px;
+  
+    .service-container {
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .hero h1{
-    font-size:60px;
-    color:red;
+  
+    .portfolio-container {
+      flex-direction: column;
+      align-items: center;
     }
-    
-    .hero p{
-    font-size:20px;
+  
+    .project-card,
+    .card {
+      width: 90%;
     }
-    
-    /* BUTTON */
-    
-    .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:red;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    transition:background 0.3s ease, transform 0.2s ease;
+  
+    .projects img {
+      width: 90%;
     }
-    
-    .btn:hover{
-    background:#c70000;
-    transform:translateY(-2px);
-    }
-    
-    /* SERVICES */
-    
-    .services{
-    padding:80px 20px;
-    text-align:center;
-    }
-    
-    .service-container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    }
-    
-    .card{
-    background:#111;
-    padding:30px;
-    width:250px;
-    border-radius:10px;
-    }
-    
-    /* PORTFOLIO */
-    
-    .portfolio{
-    padding:80px 20px;
-    text-align:center;
-    background:#0a0a0a;
-    }
-    
-    .portfolio-intro{
-    margin-bottom:40px;
-    font-size:18px;
-    }
-    
-    .portfolio-container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-    }
-    
-    .project-card{
-    background:#111;
-    padding:30px;
-    width:260px;
-    border-radius:10px;
-    transition:transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card:hover{
-    transform:translateY(-10px) scale(1.02);
-    box-shadow:0 8px 20px rgba(0,0,0,0.4);
-    border:1px solid red;
-    }
-    
-    .project-card img{
-        width:100%;
-        height:200px;
-        object-fit:cover;
-        border-radius:8px;
-        margin-bottom:15px;
-        }
-    
-    /* PROJECT IMAGES */
-    
-    .projects img{
-    width:300px;
-    margin:10px;
-    border-radius:10px;
-    }
-    
-    /* ABOUT */
-    
-    .about{
-    padding:80px 20px;
-    text-align:center;
-    background:#0a0a0a;
-    }
-    
-    .about p{
-    max-width:700px;
-    margin:auto;
-    font-size:18px;
-    line-height:1.6;
-    }
-    
-    /* CONTACT */
-    
-    .contact{
-    padding:80px 20px;
-    text-align:center;
-    }
-    
-    /* WHATSAPP BUTTON */
-    
-    .whatsapp-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px 20px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
-    }
-    
-    .whatsapp-btn:hover{
-    background:#1ebe5b;
-    }
-    
-    /* MOBILE RESPONSIVENESS */
-    
-    @media (max-width:768px){
-    
-    nav{
-    flex-direction:column;
-    gap:10px;
-    }
-    
-    nav ul{
-    flex-direction:column;
-    gap:10px;
-    padding:0;
-    }
-    
-    .hero h1{
-    font-size:40px;
-    }
-    
-    .hero p{
-    font-size:18px;
-    }
-    
-    .service-container{
-    flex-direction:column;
-    align-items:center;
-    }
-    
-    .portfolio-container{
-    flex-direction:column;
-    align-items:center;
-    }
-    
-    .project-card{
-    width:90%;
-    }
-    
-    .card{
-    width:90%;
-    }
-    
-    .projects img{
-    width:90%;
-    }
-    
-    }
+  }
