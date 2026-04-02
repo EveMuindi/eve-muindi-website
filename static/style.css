@@ -220,12 +220,12 @@ html {
 .whatsapp-btn:hover {
   transform: scale(1.1);
   background: #1ebe5d;
-}/* ABOUT */
+/* ABOUT */
 .about {
   padding: 80px 20px;
   text-align: center;
   max-width: 900px;
-  margin: 0 auto; /* THIS centers it */
+  margin: 0 auto; /* centers it */
 }
 
 .about h2 {
@@ -236,7 +236,9 @@ html {
 .about p {
   font-size: 18px;
   line-height: 1.6;
-}/* CONTACT SECTION */
+}
+
+/* CONTACT SECTION */
 .contact {
   padding: 80px 20px;
   text-align: center;
